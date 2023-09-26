@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="application.controllers.PersonsController">
+
+    <center>
+        <TableView fx:id="personsTable" prefWidth="780" prefHeight="600" onMouseClicked="#handleTableClick">
+            <columns>
+                <TableColumn text="id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id"/>
+                    </cellValueFactory>
+                    <prefWidth>30</prefWidth>
+                </TableColumn>
+                <TableColumn text="Job Title">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="jobTitle"/>
+                    </cellValueFactory>
+                    <prefWidth>150</prefWidth>
+                </TableColumn>
+                <TableColumn text="FirstName LastName">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="firstNameLastName"/>
+                    </cellValueFactory>
+                    <prefWidth>150</prefWidth>
+                </TableColumn>
+                <TableColumn text="Phone">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="phone"/>
+                    </cellValueFactory>
+                    <prefWidth>150</prefWidth>
+                </TableColumn>
+                <TableColumn text="Email">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="email"/>
+                    </cellValueFactory>
+                    <prefWidth>150</prefWidth>
+                </TableColumn>
+                <TableColumn text="Num domains">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="numDomains"/>
+                    </cellValueFactory>
+                    <prefWidth>150</prefWidth>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+
+</BorderPane>
