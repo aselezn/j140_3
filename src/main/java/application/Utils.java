@@ -5,7 +5,7 @@ import javafx.collections.ObservableList;
 
 import java.util.List;
 
-public class AppUtils {
+public class Utils {
 
     public static <T> ObservableList<T> createObservableList(List<T> data) {
         return FXCollections.observableArrayList(data);

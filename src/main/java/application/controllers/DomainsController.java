@@ -1,6 +1,6 @@
 package application.controllers;
 
-import application.AppUtils;
+import application.Utils;
 import application.SceneFactory;
 import database.dto.PersonCountDomainsDto;
 import database.models.Domain;
@@ -54,7 +54,7 @@ public class DomainsController {
 
         ((Stage)comeBackButton.getScene().getWindow()).setScene(SceneFactory.getPersonsView());
         PersonsController personsController = SceneFactory.getPersonsController();
-        ObservableList<PersonCountDomainsDto> observablePersons = AppUtils.createObservableList(PersonQueries.getPersons());
+        ObservableList<PersonCountDomainsDto> observablePersons = Utils.createObservableList(PersonQueries.getPersons());
         personsController.getPersonsTable().setItems(observablePersons);
 
     };

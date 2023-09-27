@@ -14,7 +14,6 @@ public class SceneFactory {
     private static Scene loginView;
     private static Scene personsView;
     private static PersonsController personsController;
-
     private static Scene domainsView;
     private static DomainsController domainsController;
 
@@ -46,7 +45,6 @@ public class SceneFactory {
     public static PersonsController getPersonsController(){
         return personsController;
     }
-
 
     public static Scene getDomainsView() throws IOException {
 

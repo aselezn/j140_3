@@ -1,6 +1,6 @@
 package application.controllers;
 
-import application.AppUtils;
+import application.Utils;
 import application.SceneFactory;
 import database.dto.PersonCountDomainsDto;
 import database.queries.AuthQueries;
@@ -38,7 +38,7 @@ public class LoginController {
         if (AuthQueries.authenticateUser(username, password)) {
             ((Stage)loginButton.getScene().getWindow()).setScene(SceneFactory.getPersonsView());
             PersonsController personsController = SceneFactory.getPersonsController();
-            ObservableList<PersonCountDomainsDto> observablePersons = AppUtils.createObservableList(PersonQueries.getPersons());
+            ObservableList<PersonCountDomainsDto> observablePersons = Utils.createObservableList(PersonQueries.getPersons());
             personsController.getPersonsTable().setItems(observablePersons);
 
         } else {

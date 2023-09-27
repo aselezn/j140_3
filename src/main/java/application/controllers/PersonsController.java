@@ -1,7 +1,7 @@
 package application.controllers;
 
 
-import application.AppUtils;
+import application.Utils;
 import application.SceneFactory;
 import database.dto.PersonCountDomainsDto;
 import database.models.Domain;
@@ -53,7 +53,7 @@ public class PersonsController {
             if (person != null) {
                 ((Stage)personsTable.getScene().getWindow()).setScene(SceneFactory.getDomainsView());
                 DomainsController domainsController = SceneFactory.getDomainsController();
-                ObservableList<Domain> observableDomains = AppUtils.createObservableList(DomainQueries.getDomains(person.getId()));
+                ObservableList<Domain> observableDomains = Utils.createObservableList(DomainQueries.getDomains(person.getId()));
                 domainsController.getDomainsTable().setItems(observableDomains);
             }
         }
